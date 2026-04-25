@@ -13,3 +13,5 @@ jobs:
               uses: actions/checkout@v4
             - name: show python version
               run: python --version 
+            - name: run python program
+              run: extract_data.py
