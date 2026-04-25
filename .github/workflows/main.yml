@@ -16,6 +16,11 @@ jobs:
             - name: run test and enforce coverage
               run: |
                 pytest --cov=calc --cov-report=term --cov-fail-under=80
+            - name: Upload HTML Report
+              uses: actions/upload-artifact@v4
+              with:
+                name: html-report
+                path: report.html
             
     cd-job:
         runs-on: ubuntu-latest
