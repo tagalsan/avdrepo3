@@ -15,5 +15,11 @@ jobs:
               run: pip install -r requirements.txt
             - name: show python version
               run: python --version 
+            - name: use python 3.20 version
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.10'
+            - name: show python version
+              run: python --version   
             - name: run python program
               run: python extract_data.py
