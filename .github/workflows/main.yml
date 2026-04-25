@@ -15,7 +15,7 @@ jobs:
               run: pip install -r requirements.txt
             - name: run test and enforce coverage
               run: |
-                pytest --cov=calc --cov-report=term
+                pytest --cov=calc --cov-report=term --cov-fail-under = 80
             
     cd-job:
         runs-on: ubuntu-latest
